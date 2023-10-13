@@ -2,8 +2,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 // Local imports
-import HomeView from "../pages/HomeView.vue";
-import AboutView from "../pages/AboutView.vue";
+import HomeView from "@/pages/HomeView.vue";
+import InvestigationsView from "@/pages/InvestigationsView.vue";
 
 // List of routes
 // TODO: to be moved to subfolders
@@ -14,10 +14,10 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "About",
-    component: AboutView,
-  }
+    path: "/investigations",
+    name: "Investigations",
+    component: InvestigationsView,
+  },
 ];
 
 // Create and export router object
