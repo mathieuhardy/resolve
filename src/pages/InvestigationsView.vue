@@ -6,21 +6,26 @@
 </template>
 
 <script lang="ts">
-// Thirdparties imports
-import { Options, Vue } from "vue-class-component";
+import { defineComponent } from "vue";
 
-// Local imports
 import TableView from "@/components/organisms/TableView.vue";
 
-// Options
-@Options({
+export default defineComponent({
+  // Properties used to configure this component
+  props: {},
+  // Constant variables usable in `template` section
+  data() {
+    return {};
+  },
+  // Computed variables usable in `template` section
+  computed: {},
+  // Components usable in `template` section
   components: {
     TableView,
   },
-})
-
-// Export
-export default class InvestigationView extends Vue {}
+  // Methods usable in  `template` section
+  methods: {},
+});
 </script>
 
 <style lang="scss">
@@ -29,7 +34,7 @@ export default class InvestigationView extends Vue {}
     background-color: $DarkGrey;
     color: $Light;
   }
-  
+
   span {
     background-color: $DarkGrey;
     color: $Light;
