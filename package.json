@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "mock": "NODE_ENV=mock vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -35,6 +36,8 @@
     "typescript": "~4.5.5"
   },
   "browser": {
-    "crypto": false
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

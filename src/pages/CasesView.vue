@@ -5,14 +5,10 @@
 -->
 
 <template>
-  <nav>
-    <router-link
-      v-for="menu in menus"
-      v-bind:key="menu.name"
-      :to="{ name: menu.component }"
-      >{{ $t(menu.name) }}</router-link
-    >
-  </nav>
+  <div>
+    <TableView v-bind:headers="headers" v-bind:data="data" />
+    <span>toto</span>
+  </div>
 </template>
 
 <!--
@@ -24,17 +20,19 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-// List of menus to be displayed in navigation bar
-const menus = [
-  {
-    name: "menus.home",
-    component: "Home",
-  },
-  {
-    name: "menus.cases",
-    component: "Cases",
-  },
-];
+import TableView from "@/components/organisms/TableView.vue";
+
+// Table headers
+const headers = ["ID", "Name", "Date", "Location"];
+
+// Table data
+import cases from "@/mock/cases.json";
+
+let data = {};
+
+if (process.env.NODE_ENV == "mock") {
+  data = cases;
+}
 
 export default defineComponent({
   // Properties used to configure this component
@@ -42,13 +40,16 @@ export default defineComponent({
   // Constant variables usable in `template` section
   data() {
     return {
-      menus,
+      headers,
+      data,
     };
   },
   // Computed variables usable in `template` section
   computed: {},
   // Components usable in `template` section
-  components: {},
+  components: {
+    TableView,
+  },
   // Methods usable in  `template` section
   methods: {},
 });
@@ -60,17 +61,23 @@ export default defineComponent({
   -------------------------------------------------------------------------------------------------
 -->
 
-<style>
-nav {
-  padding: 30px;
+<style lang="scss">
+[theme="dark"] {
+  table {
+    background-color: $DarkGrey;
+    color: $Light;
+  }
+
+  span {
+    background-color: $DarkGrey;
+    color: $Light;
+  }
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+[theme="light"] {
+  table {
+    background-color: $Light;
+    color: $DarkGrey;
+  }
 }
 </style>
