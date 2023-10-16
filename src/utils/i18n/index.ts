@@ -6,12 +6,26 @@ import axios from "axios";
 // Types
 // ------------------------------------------------------------------------------------------------
 
+/**
+ * @interface IAirTableEntry
+ * 
+ * @field {string} id is the unique identifier of an AirTable entry
+ * @field {string} createdTime is the date of creation of the entry
+ * @field {IAirTableTranslations} fields is the columns of an AirTable table
+ */
 interface IAirTableEntry {
   id: string;
   createdTime: string;
   fields: IAirTableTranslations;
 }
 
+/**
+ * @interface IAirTableTranslations
+ * 
+ * @field {string} key is a unique key used in code to reference a string to be displayed
+ * @field {string} en is the English translation
+ * @field {string} fr is the French translation
+ */
 interface IAirTableTranslations {
   key: string;
   en: string;

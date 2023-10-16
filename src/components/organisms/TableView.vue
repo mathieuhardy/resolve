@@ -5,6 +5,7 @@
   TODO: list of row-per-page selector
   TODO: jump to page area
   TODO: module ordering: "row-per-page-selector,pages,jump-to"
+  TODO: move enums to dedicated file
   =================================================================================================
 -->
 
@@ -148,6 +149,7 @@ export enum Searchable {
 
 /**
  * @interface IColumn
+ *
  * @field {string} name is the string that will be displayed in HTML
  * @field {string} bindTo is the name of the key to match in data to insert the row value for this column
  * @field {Sortable} sortable is used to check if the table is sortable on this column
@@ -248,7 +250,7 @@ export default defineComponent({
   },
 
   // ----------------------------------------------------------------------------------------------
-  // Constant variables usable in `template` section
+  // Local read-write variables usable in `template` section
   // ----------------------------------------------------------------------------------------------
 
   data() {
@@ -317,8 +319,6 @@ export default defineComponent({
      * Returns the indexes list of visible pages.
      */
     visiblePagesIndexes() {
-      let indexes = [];
-
       // Special empty case
       if (this.hidePages || this.pagesCount == 1) {
         return [];
@@ -491,7 +491,7 @@ export default defineComponent({
     // TODO:
     setRowsPerPage(count: number) {
       // this.rowsPerPage = count;
-    }
+    },
   },
 });
 </script>
@@ -504,6 +504,10 @@ export default defineComponent({
 
 <style lang="scss">
 [theme="dark"] {
+  button {
+    margin-right: 10px;
+  }
+
   table {
     background-color: $DarkGrey;
     color: $Light;

@@ -12,7 +12,7 @@
       v-bind:showHeader="true"
       v-bind:rowsPerPage=5
       v-bind:maxPagesInPagination=3
-      v-bind:rowsPerPageSelectors="[5, 50]"
+      v-bind:rowsPerPageSelectors="[10, 50]"
     />
   </div>
 </template>
@@ -27,6 +27,7 @@
 import { defineComponent } from "vue";
 
 import TableView from "@/components/organisms/TableView.vue";
+
 import {
   IColumn,
   Searchable,
@@ -62,7 +63,7 @@ const columns: IColumn[] = [
 ];
 
 // Table data
-import cases from "@/mock/cases.json";
+import cases from "@/mocks/cases.json";
 
 let data = {};
 
@@ -100,11 +101,6 @@ export default defineComponent({
 <style lang="scss">
 [theme="dark"] {
   table {
-    background-color: $DarkGrey;
-    color: $Light;
-  }
-
-  span {
     background-color: $DarkGrey;
     color: $Light;
   }
