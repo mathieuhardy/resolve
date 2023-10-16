@@ -6,13 +6,13 @@ import axios from "axios";
 // Types
 // ------------------------------------------------------------------------------------------------
 
-interface AirTableEntry {
+interface IAirTableEntry {
   id: string;
   createdTime: string;
-  fields: AirTableTranslations;
+  fields: IAirTableTranslations;
 }
 
-interface AirTableTranslations {
+interface IAirTableTranslations {
   key: string;
   en: string;
   fr: string;
@@ -78,7 +78,7 @@ async function fetchTable(token: string, baseId: string, table: string) {
 }
 
 function airtableToMessages(scope: string) {
-  function reducer(result: Lang, current: AirTableEntry) {
+  function reducer(result: Lang, current: IAirTableEntry) {
     if ("key" in current.fields) {
       const key: string = current.fields.key as string;
 

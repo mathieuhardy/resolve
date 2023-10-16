@@ -6,8 +6,14 @@
 
 <template>
   <div>
-    <TableView v-bind:headers="headers" v-bind:data="data" />
-    <span>toto</span>
+    <TableView
+      v-bind:columns="columns"
+      v-bind:data="data"
+      v-bind:showHeader="true"
+      v-bind:rowsPerPage=5
+      v-bind:maxPagesInPagination=3
+      v-bind:rowsPerPageSelectors="[5, 50]"
+    />
   </div>
 </template>
 
@@ -21,9 +27,39 @@
 import { defineComponent } from "vue";
 
 import TableView from "@/components/organisms/TableView.vue";
+import {
+  IColumn,
+  Searchable,
+  Sortable,
+} from "@/components/organisms/TableView.vue";
 
-// Table headers
-const headers = ["ID", "Name", "Date", "Location"];
+// Columns
+const columns: IColumn[] = [
+  {
+    name: "ID",
+    bindTo: "id",
+    sortable: Sortable.Yes,
+    searchable: Searchable.No,
+  },
+  {
+    name: "Name",
+    bindTo: "name",
+    sortable: Sortable.Yes,
+    searchable: Searchable.Yes,
+  },
+  {
+    name: "Date",
+    bindTo: "date",
+    sortable: Sortable.Yes,
+    searchable: Searchable.Yes,
+  },
+  {
+    name: "Location",
+    bindTo: "location",
+    sortable: Sortable.No,
+    searchable: Searchable.Yes,
+  },
+];
 
 // Table data
 import cases from "@/mock/cases.json";
@@ -40,7 +76,7 @@ export default defineComponent({
   // Constant variables usable in `template` section
   data() {
     return {
-      headers,
+      columns,
       data,
     };
   },
