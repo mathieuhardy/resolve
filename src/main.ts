@@ -15,7 +15,6 @@ useDark({
 });
 
 try {
-  // Internationalization
   await i18n.initialize();
 } catch (error) {
   console.error(error);

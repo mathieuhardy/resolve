@@ -34,6 +34,10 @@ const menus = [
     name: "menus.cases",
     component: "Cases",
   },
+  {
+    name: "menus.tutorial",
+    component: "Tutorial",
+  },
 ];
 
 export default defineComponent({
