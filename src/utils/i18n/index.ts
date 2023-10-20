@@ -47,9 +47,9 @@ export let messages: Lang = {};
 // ------------------------------------------------------------------------------------------------
 
 export async function initialize() {
-  const token = process.env.VUE_APP_AIRTABLE_TOKEN;
-  const baseId = process.env.VUE_APP_AIRTABLE_BASE_ID;
-  const tables = process.env.VUE_APP_AIRTABLE_TABLES.split(",");
+  const token = import.meta.env.VITE_AIRTABLE_TOKEN;
+  const baseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+  const tables = import.meta.env.VITE_AIRTABLE_TABLES.split(",");
 
   // `tables` variables is a list of tables with a scope name. For example:
   //

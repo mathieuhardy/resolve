@@ -26,7 +26,7 @@ import hljsHtml from "highlight.js/lib/languages/xml";
 
 import { ButtonKind, ButtonShape, Color, TextSize } from "@/enums";
 import ButtonView from "@/components/atoms/ButtonView.vue";
-import markdown from "!!raw-loader!./markdown.md";
+import markdown from "./markdown.md";
 
 hljs.registerLanguage("html", hljsHtml);
 

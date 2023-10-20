@@ -65,9 +65,9 @@ const columns: IColumn[] = [
 // Table data
 import cases from "@/mocks/cases.json";
 
-let data = {};
+let data = [];
 
-if (process.env.NODE_ENV == "mock") {
+if (import.meta.env.MODE == "mock") {
   data = cases;
 }
 

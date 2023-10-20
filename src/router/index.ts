@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 // List of development/debugging routes
-if (process.env.NODE_ENV != "production") {
+if (!import.meta.env.PROD) {
   routes.push({
     path: "/tutorial",
     name: "Tutorial",
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV != "production") {
 
 // Create and export router object
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 
