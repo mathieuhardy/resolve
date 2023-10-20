@@ -19,12 +19,16 @@ const routes: Array<RouteRecordRaw> = [
     name: "Cases",
     component: CasesView,
   },
-  {
+];
+
+// List of development/debugging routes
+if (process.env.NODE_ENV != "production") {
+  routes.push({
     path: "/tutorial",
     name: "Tutorial",
     component: TutorialView,
-  },
-];
+  });
+}
 
 // Create and export router object
 const router = createRouter({
