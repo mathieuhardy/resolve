@@ -23,5 +23,9 @@ hero:
     - theme: alt
       text: Components
       link: /components
+
+    - theme: alt
+      text: Deployment
+      link: /deployment
 ---
 

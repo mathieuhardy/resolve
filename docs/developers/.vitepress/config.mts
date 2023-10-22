@@ -26,6 +26,7 @@ export default defineConfig({
           { text: "Get started", link: "/get-started" },
           { text: "Documentations", link: "/documentations" },
           { text: "Components", link: "/components" },
+          { text: "Deployment", link: "/deployment" },
         ],
       },
     ],

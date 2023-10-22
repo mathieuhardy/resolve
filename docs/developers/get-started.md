@@ -21,3 +21,37 @@ Here's the filesystem organisation of the project:
     - `utils/`: utility libraries used in the application.
         - `i18n/`: internationalization library.
 - `...`: configurations files for Typescript, Vue, Docker and else.
+
+# Setup
+
+Setup development environment by simply calling the command:
+
+```shell
+yarn
+```
+
+This will install all needed packages and gets you ready to run the application.
+
+# Running application
+
+Two possibilities here:
+
+```shell
+# Run application in debug mode
+yarn dev
+
+# Run application using mock data instead of calling a backend
+yarn mock
+```
+
+The application will be served to [http://localhost:8080](http://localhost:8080).
+
+# Build application
+
+You can build a deployable version of the application by calling:
+
+```shell
+yarn build
+```
+
+The output is placed in `dist/` directory and is ready to be deployed the way you want.
