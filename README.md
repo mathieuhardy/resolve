@@ -1,4 +1,4 @@
-# Inspecteur Gadget
+# Resolve
 
 Police cases and investigation helper.
 
