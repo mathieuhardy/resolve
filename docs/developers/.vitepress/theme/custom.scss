@@ -1,0 +1,35 @@
+.example {
+  background-color: #272727;
+  color: #272727;
+  border: 1px solid #cccccc;
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+
+  input {
+    background-color: #ffffff;
+    border: 1px solid #272727;
+    padding-left: 0.5rem;
+  }
+
+  input::placeholder {
+    color: #272727;
+    opacity: 0.8;
+  }
+
+  span {
+    color: #ffffff;
+  }
+
+  button {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.3rem;
+  }
+
+  table,
+  tr,
+  td {
+    border: none !important;
+    background-color: transparent !important;
+  }
+}

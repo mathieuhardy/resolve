@@ -44,8 +44,7 @@ We try to use as less libraries as possible to keep control on components and re
 | [vue-i18n](https://www.npmjs.com/package/vue-i18n)                       | Vue I18n translations management's library                         |
 | [vue-router](https://www.npmjs.com/package/vue-router)                   | Vue routing library                                                |
 
-
-
 ## Developers
 
-See dedicated [documentation](./docs/developers.md).
+> **Warning**
+> TODO: place documentation URL
