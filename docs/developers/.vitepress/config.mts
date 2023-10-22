@@ -5,6 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Resolve",
   description: "Documentation for developers",
+  base: "/resolve/",
 
   ignoreDeadLinks: "localhostLinks",
 
