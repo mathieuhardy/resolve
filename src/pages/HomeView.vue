@@ -4,7 +4,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { ButtonKind, ButtonShape, Color, TextSize } from "@/enums";
+import { Kind as ButtonKind, Shape as ButtonShape } from "@/components/atoms/ButtonView.vue";
+import { Color, TextSize } from "@/enums";
 
 export default defineComponent({
   // Properties used to configure this component

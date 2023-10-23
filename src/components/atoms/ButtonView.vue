@@ -20,8 +20,25 @@
 
 <script lang="ts">
 import { defineComponent, PropType, reactive } from "vue";
+import { Color, TextSize } from "@/enums";
 
-import { ButtonKind, ButtonShape, Color, TextSize } from "@/enums";
+/**
+ * List of available button shapes.
+ */
+ export enum Shape {
+  Square,
+  Rounded,
+  Badge,
+}
+
+/**
+ * Kind of the button (defines its behavior).
+ */
+export enum Kind {
+  Clear,
+  Filled,
+  Toggle,
+}
 
 export default defineComponent({
   // ----------------------------------------------------------------------------------------------
@@ -43,8 +60,8 @@ export default defineComponent({
      */
     shape: {
       required: false,
-      type: Number as PropType<ButtonShape>,
-      default: ButtonShape.Square,
+      type: Number as PropType<Shape>,
+      default: Shape.Square,
     },
 
     /**
@@ -61,8 +78,8 @@ export default defineComponent({
      */
     kind: {
       required: false,
-      kind: Number as PropType<ButtonKind>,
-      default: ButtonKind.Filled,
+      kind: Number as PropType<Kind>,
+      default: Kind.Filled,
     },
 
     /**
@@ -111,9 +128,9 @@ export default defineComponent({
         grey: this.color == Color.Grey,
         red: this.color == Color.Red,
 
-        square: this.shape == ButtonShape.Square,
-        rounded: this.shape == ButtonShape.Rounded,
-        badge: this.shape == ButtonShape.Badge,
+        square: this.shape == Shape.Square,
+        rounded: this.shape == Shape.Rounded,
+        badge: this.shape == Shape.Badge,
 
         "text-xs": this.size == TextSize.XSmall,
         "text-sm": this.size == TextSize.Small,
@@ -121,11 +138,11 @@ export default defineComponent({
         "text-lg": this.size == TextSize.Large,
         "text-xl": this.size == TextSize.XLarge,
 
-        clear: this.kind == ButtonKind.Clear,
-        filled: this.kind == ButtonKind.Filled,
-        toggle: this.kind == ButtonKind.Toggle,
+        clear: this.kind == Kind.Clear,
+        filled: this.kind == Kind.Filled,
+        toggle: this.kind == Kind.Toggle,
 
-        checked: this.kind == ButtonKind.Toggle && this.isChecked,
+        checked: this.kind == Kind.Toggle && this.isChecked,
 
         disabled: this.disabled,
       });
@@ -147,7 +164,7 @@ export default defineComponent({
      * Callback called when the button is clicked.
      */
     onClick() {
-      if (this.kind == ButtonKind.Toggle) {
+      if (this.kind == Kind.Toggle) {
         this.isChecked = !this.isChecked;
       }
     },

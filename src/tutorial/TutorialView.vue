@@ -24,7 +24,8 @@ import showdownHighlight from "showdown-highlight";
 import hljs from "highlight.js";
 import hljsHtml from "highlight.js/lib/languages/xml";
 
-import { ButtonKind, ButtonShape, Color, TextSize } from "@/enums";
+import { Color, TextSize } from "@/enums";
+import { Kind as ButtonKind, Shape as ButtonShape } from "@/components/atoms/ButtonView.vue";
 import ButtonView from "@/components/atoms/ButtonView.vue";
 import markdown from "./markdown.md";
 
