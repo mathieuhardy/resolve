@@ -27,7 +27,7 @@ Here's the filesystem organisation of the project:
 Setup development environment by simply calling the command:
 
 ```shell
-yarn
+yarn install
 ```
 
 This will install all needed packages and gets you ready to run the application.

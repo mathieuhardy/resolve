@@ -18,7 +18,8 @@ yarn docs:dev:build
 The output can be found in `docs/developers/.vitepress/dist/`.
 This is the files that will be used for the deployment documentation.
 
-> <Badge type="warning" text="todo" /> explain deployment
+You should not have to do anything as the deployment is performed via GitHub actions.
+You'll find the Yaml script in `.github/workflows` and it's triggered on every commit on `main` branch and the URL is [https://mathieuhardy.github.io/resolve](https://mathieuhardy.github.io/resolve).
 
 # VueJS components
 

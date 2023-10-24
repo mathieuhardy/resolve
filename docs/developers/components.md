@@ -1,6 +1,6 @@
 # Components
 
-We're following the atomic design for VueJS components. The idea is to have composable components some small, some bigger.
+We follow an atomic design for VueJS components. The idea is to have composable components some small, some bigger.
 
 ## Atoms
 
@@ -55,6 +55,6 @@ A form is composed of multiple inputs, buttons, etc.
 
 ## Pages
 
-Pages are the web page displayed to the user. They are composed of every kind of components and arrange them using layouts.
+Pages are the web page displayed to the user. A page is composed of every kind of components and arrange them using layouts.
 
 > **pages** are located in `src/pages`
