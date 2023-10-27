@@ -35,8 +35,8 @@ const menus = [
     component: "Cases",
   },
   {
-    name: "menus.tutorial",
-    component: "Tutorial",
+    name: "menus.components",
+    component: "Components",
   },
 ];
 

@@ -25,9 +25,10 @@ import { Color, TextSize } from "@/enums";
 /**
  * List of available button shapes.
  */
- export enum Shape {
+export enum Shape {
   Square,
   Rounded,
+  FullyRounded,
   Badge,
 }
 
@@ -99,6 +100,15 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+
+    /**
+     * Whether the button should have a shadow.
+     */
+    shadow: {
+      required: false,
+      type: Boolean,
+      default: false,
+    },
   },
 
   // ----------------------------------------------------------------------------------------------
@@ -130,11 +140,12 @@ export default defineComponent({
 
         square: this.shape == Shape.Square,
         rounded: this.shape == Shape.Rounded,
+        "fully-rounded": this.shape == Shape.FullyRounded,
         badge: this.shape == Shape.Badge,
 
         "text-xs": this.size == TextSize.XSmall,
         "text-sm": this.size == TextSize.Small,
-        "text-base": this.size == TextSize.Normal,
+        "text-normal": this.size == TextSize.Normal,
         "text-lg": this.size == TextSize.Large,
         "text-xl": this.size == TextSize.XLarge,
 
@@ -145,6 +156,8 @@ export default defineComponent({
         checked: this.kind == Kind.Toggle && this.isChecked,
 
         disabled: this.disabled,
+
+        shadow: this.shadow,
       });
     },
   },
@@ -194,6 +207,10 @@ button {
     border-radius: 0.4rem;
   }
 
+  &.fully-rounded {
+    border-radius: 0.95rem;
+  }
+
   &.badge {
     border-radius: 50%;
     width: 2.5em;
@@ -220,6 +237,11 @@ button {
   }
 
   button {
+    // Shadow
+    &.shadow {
+      box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.2);
+    }
+
     // Button filled
     &.filled {
       &:hover:not(.disabled) {
@@ -255,64 +277,72 @@ button {
     &.toggle,
     &.clear {
       background-color: transparent;
+      transition: all 0.3s ease;
+
+      &:hover:not(.disabled).checked {
+        filter: brightness(120%);
+      }
 
       &.transparent {
         @include clear($White, $White);
-      }
 
-      &.transparent:hover,
-      &.transparent.checked {
-        @include filled($DarkGrey, $White);
+        &:hover,
+        &.checked {
+          @include filled($DarkGrey, $White);
+        }
       }
 
       &.white {
         @include clear($White, $White);
-      }
 
-      &.white:hover,
-      &.white.checked {
-        @include filled($DarkGrey, $White);
+        &:hover,
+        &.checked {
+          @include filled($DarkGrey, $White);
+        }
       }
 
       &.blue {
         @include clear($White, $Blue);
-      }
 
-      &.blue:hover,
-      &.blue.checked {
-        @include filled($White, $Blue);
+        &:hover,
+        &.checked {
+          @include filled($White, $Blue);
+        }
       }
 
       &.green {
         @include clear($White, $Green);
-      }
 
-      &.green:hover,
-      &.green.checked {
-        @include filled($White, $Green);
+        &:hover,
+        &.checked {
+          @include filled($White, $Green);
+        }
       }
 
       &.grey {
         @include clear($White, $Grey);
-      }
 
-      &.grey:hover,
-      &.grey.checked {
-        @include filled($White, $Grey);
+        &:hover,
+        &.checked {
+          @include filled($White, $Grey);
+        }
       }
 
       &.red {
         @include clear($White, $Red);
-      }
 
-      &.red:hover,
-      &.red.checked {
-        @include filled($White, $Red);
+        &:hover,
+        &.checked {
+          @include filled($White, $Red);
+        }
       }
     }
   }
 }
 
 [theme="light"] {
+  &.shadow {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
 }
 </style>

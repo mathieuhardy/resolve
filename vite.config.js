@@ -24,7 +24,7 @@ export default defineConfig({
       {
         find: "vue",
         replacement: "vue/dist/vue.esm-bundler.js",
-      }
+      },
     ],
   },
 
@@ -35,6 +35,11 @@ export default defineConfig({
           @import "@/theme/index.scss";
         `,
       },
+    },
+
+    modules: {
+      generateScopedName: "[hash:base64:5]",
+      hashPrefix: " ",
     },
   },
 });

@@ -27,7 +27,7 @@ import hljsHtml from "highlight.js/lib/languages/xml";
 import { Color, TextSize } from "@/enums";
 import { Kind as ButtonKind, Shape as ButtonShape } from "@/components/atoms/ButtonView.vue";
 import ButtonView from "@/components/atoms/ButtonView.vue";
-import markdown from "./markdown.md";
+import components from "./components.md";
 
 hljs.registerLanguage("html", hljsHtml);
 
@@ -43,7 +43,7 @@ const converter = new showdown.Converter({
   ],
 });
 
-const html = converter.makeHtml(markdown);
+const html = converter.makeHtml(components);
 hljs.highlight(html, { language: "xml" });
 
 const VueMarkdown = h(

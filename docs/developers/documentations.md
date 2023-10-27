@@ -24,7 +24,7 @@ You'll find the Yaml script in `.github/workflows` and it's triggered on every c
 # VueJS components
 
 It's possible to get an overview of the Vue components and the code used to implement them by
-running the application and visiting the route [http://localhost:8080/tutorials](http://localhost:8080/tutorials).
+running the application and visiting the route [http://localhost:8080/components](http://localhost:8080/components).
 
 > <Badge type="tip" text="note" /> this route is available for all non-production builds.
 

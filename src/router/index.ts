@@ -4,7 +4,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 // Local imports
 import HomeView from "@/pages/HomeView.vue";
 import CasesView from "@/pages/CasesView.vue";
-import TutorialView from "@/tutorial/TutorialView.vue";
+import ComponentsView from "@/components/docs/ComponentsView.vue";
 
 // List of routes
 // TODO: to be moved to subfolders
@@ -24,9 +24,9 @@ const routes: Array<RouteRecordRaw> = [
 // List of development/debugging routes
 if (!import.meta.env.PROD) {
   routes.push({
-    path: "/tutorial",
-    name: "Tutorial",
-    component: TutorialView,
+    path: "/components",
+    name: "Components",
+    component: ComponentsView,
   });
 }
 
