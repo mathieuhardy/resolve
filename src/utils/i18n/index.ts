@@ -47,6 +47,10 @@ export let messages: Lang = {};
 // ------------------------------------------------------------------------------------------------
 
 export async function initialize() {
+  if (import.meta.env.MODE == "mock") {
+    return;
+  }
+  
   const token = import.meta.env.VITE_AIRTABLE_TOKEN;
   const baseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
   const tables = import.meta.env.VITE_AIRTABLE_TABLES.split(",");
