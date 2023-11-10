@@ -25,11 +25,16 @@ import hljs from "highlight.js";
 import hljsHtml from "highlight.js/lib/languages/xml";
 
 import { Color, TextSize } from "@/enums";
-import { Kind as ButtonKind, Shape as ButtonShape } from "@/components/atoms/ButtonView.vue";
+import {
+  Kind as ButtonKind,
+  Shape as ButtonShape,
+} from "@/components/atoms/ButtonView.vue";
 import ButtonView from "@/components/atoms/ButtonView.vue";
 import components from "./components.md";
 
 hljs.registerLanguage("html", hljsHtml);
+
+showdown.setOption("disableForced4SpacesIndentedSublists", true);
 
 const converter = new showdown.Converter({
   customizedHeaderId: true,
@@ -99,22 +104,5 @@ export default defineComponent({
   =================================================================================================
 -->
 
-<style lang="scss">
-@import "./github-markdown.css";
-@import "./highlight.css";
-
-pre {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: #272822 !important;
-  margin-bottom: 2rem;
-}
-
-.overview {
-  display: flex;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-</style>
+<style lang="postcss" src="@/assets/theme/markdown.scss"></style>
+<style lang="css" src="@/assets/theme/highlight.css"></style>

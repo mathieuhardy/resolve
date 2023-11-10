@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import { useDark } from "@vueuse/core";
+import { useDark } from "@vueuse/core"; // TODO: remove
 import { createI18n } from "vue-i18n";
 
 import App from "@/App.vue";

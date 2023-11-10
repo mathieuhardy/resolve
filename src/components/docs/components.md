@@ -27,7 +27,9 @@
 ```
 
 <div class="overview">
-<ButtonView>Default button</ButtonView>
+  <div style="display: flex">
+    <ButtonView>Default button</ButtonView>
+  </div>
 </div>
 
 ## With colors <a id="buttons-with-colors"></a>
@@ -37,11 +39,13 @@
 ```
 
 <div class="overview">
-<ButtonView v-bind:color="Color.White">White</ButtonView>
-<ButtonView v-bind:color="Color.Blue">Blue</ButtonView>
-<ButtonView v-bind:color="Color.Green">Green</ButtonView>
-<ButtonView v-bind:color="Color.Grey">Grey</ButtonView>
-<ButtonView v-bind:color="Color.Red">Red</ButtonView>
+  <div style="display: flex">
+    <ButtonView v-bind:color="Color.White">White</ButtonView>
+    <ButtonView v-bind:color="Color.Blue">Blue</ButtonView>
+    <ButtonView v-bind:color="Color.Green">Green</ButtonView>
+    <ButtonView v-bind:color="Color.Grey">Grey</ButtonView>
+    <ButtonView v-bind:color="Color.Red">Red</ButtonView>
+  </div>
 </div>
 
 | Name  | Value       |
@@ -59,34 +63,36 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Square">Square</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Square">Square</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Rounded">Rounded</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Rounded">Rounded</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.FullyRounded">Fully rounded</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.FullyRounded">Fully rounded</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Badge">1</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Badge">1</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Badge">10</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Badge">10</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Badge">100</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Badge">100</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Badge">99+</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Badge">99+</ButtonView>
 
+  </div>
 </div>
 
 | Name           | Value                    |
@@ -103,31 +109,33 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:color="Color.Green"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:size="TextSize.XSmall">x-small</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:size="TextSize.XSmall">x-small</ButtonView>
   
-  <ButtonView
-    v-bind:color="Color.Green"
-    v-bind:shape="ButtonShape.Rounded"
-    v-bind:size="TextSize.Small">small</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:size="TextSize.Small">small</ButtonView>
 
-<ButtonView
-    v-bind:color="Color.Green"
-    v-bind:shape="ButtonShape.Rounded"
-    v-bind:size="TextSize.Normal">base</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:size="TextSize.Normal">base</ButtonView>
 
-<ButtonView
-    v-bind:color="Color.Green"
-    v-bind:shape="ButtonShape.Rounded"
-    v-bind:size="TextSize.Large">large</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:size="TextSize.Large">large</ButtonView>
 
-<ButtonView
-    v-bind:color="Color.Green"
-    v-bind:shape="ButtonShape.Rounded"
-    v-bind:size="TextSize.XLarge">x-large</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:size="TextSize.XLarge">x-large</ButtonView>
 
+  </div>
 </div>
 
 | Name    | Value           |
@@ -145,36 +153,38 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:color="Color.None"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">None</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:color="Color.None"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">None</ButtonView>
     
-<ButtonView
-  v-bind:color="Color.White"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">White</ButtonView>
+    <ButtonView
+      v-bind:color="Color.White"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">White</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">Blue</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">Blue</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Green"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">Green</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">Green</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Grey"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">Grey</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Grey"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">Grey</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Red"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Clear">Red</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Red"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Clear">Red</ButtonView>
 
+  </div>
 </div>
 
 ## Toggle buttons <a id="buttons-toggle"></a>
@@ -184,36 +194,38 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:color="Color.None"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">None</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:color="Color.None"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">None</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.White"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">White</ButtonView>
+    <ButtonView
+      v-bind:color="Color.White"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">White</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Blue"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">Blue</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Blue"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">Blue</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Green"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">Green</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Green"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">Green</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Grey"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">Grey</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Grey"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">Grey</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Red"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Toggle">Red</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Red"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Toggle">Red</ButtonView>
 
+  </div>
 </div>
 
 ## Enabled/disabled <a id="buttons-enabled-disabled"></a>
@@ -223,18 +235,20 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:color="Color.Red"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Filled"
-  v-bind:disabled="false">Enabled</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:color="Color.Red"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Filled"
+      v-bind:disabled="false">Enabled</ButtonView>
 
-<ButtonView
-  v-bind:color="Color.Red"
-  v-bind:shape="ButtonShape.Rounded"
-  v-bind:kind="ButtonKind.Filled"
-  v-bind:disabled="true">Disabled</ButtonView>
+    <ButtonView
+      v-bind:color="Color.Red"
+      v-bind:shape="ButtonShape.Rounded"
+      v-bind:kind="ButtonKind.Filled"
+      v-bind:disabled="true">Disabled</ButtonView>
 
+  </div>
 </div>
 
 ## With shadow <a id="buttons-with-shadow"></a>
@@ -247,8 +261,10 @@
 ```
 
 <div class="overview">
-<ButtonView
-  v-bind:shadow="true"
-  v-bind:color="Color.Red" 
-  v-bind:shape="ButtonShape.Rounded">Red</ButtonView>
+  <div style="display: flex">
+    <ButtonView
+      v-bind:shadow="true"
+      v-bind:color="Color.Red" 
+      v-bind:shape="ButtonShape.Rounded">Red</ButtonView>
+  </div>
 </div>

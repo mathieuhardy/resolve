@@ -1,0 +1,155 @@
+// TODO: move to common section
+
+.markdown-body {
+  // p,
+  // blockquote,
+  // ul,
+  // ol,
+  // dl,
+  // table,
+  // pre,
+  // details {
+  //   @apply mb-1;
+  // }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold
+      mt-8 mb-4;
+  }
+
+  h1 {
+    @apply text-3xl
+      pb-1
+      border-b
+      border-dark-grey dark:border-light;
+  }
+
+  h2 {
+    @apply text-2xl
+      pb-1;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  h5 {
+    @apply text-sm;
+  }
+
+  h6 {
+    @apply text-xs;
+  }
+
+  ul,
+  ol {
+    @apply mt-0 mb-0
+      pl-4;
+
+    ol {
+      @apply list-roman;
+    }
+
+    ul,
+    ol {
+      @apply mt-0 mb-0
+        pl-3;
+
+      ol {
+        @apply list-alpha;
+      }
+    }
+  }
+
+  pre {
+    @apply mb-4
+      p-2
+      rounded
+      w-fit
+      bg-grey dark:bg-dark
+      border
+      border-dark dark:border-light;
+
+    code {
+      @apply font-mono
+        mt-0 mb-8;
+
+      &::before {
+        @apply text-sm
+          block
+          rounded
+          pl-0.5 pr-0.5
+          mb-4
+          w-fit
+          bg-light-grey dark:bg-light-grey;
+      }
+
+      &.xml:before {
+        content: "xml";
+
+        @apply bg-green dark:bg-green;
+      }
+
+      &.ts:before {
+        content: "ts";
+
+        @apply bg-dark-blue dark:bg-dark-blue;
+      }
+    }
+  }
+
+  table {
+    @apply
+      text-center
+      text-sm
+      font-light;
+
+    th {
+      @apply font-semibold;
+    }
+
+    th,
+    td {
+      @apply p-2
+        border
+        border-dark dark:border-light-grey;
+    }
+  }
+
+  .overview {
+    @apply mt-4 mb-4
+      p-2
+      rounded
+      w-fit
+      bg-grey dark:bg-grey
+      text-dark dark:text-dark;
+
+    &::before {
+      content: "overview";
+
+      @apply text-sm
+        block
+        rounded
+        pl-0.5 pr-0.5
+        mb-2
+        w-fit;
+    }
+
+    * {
+      @apply bg-grey dark:bg-grey;
+    }
+
+    button {
+      @apply mr-2;
+    }
+  }
+}

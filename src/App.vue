@@ -50,14 +50,14 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $White;
-  background-color: $DarkGrey;
+  // color: $White;
+  // background-color: $DarkGrey;
   padding: 1rem;
   text-align: left;
 }
 
-* {
-  color: $White;
-  background-color: $DarkGrey;
-}
+// * {
+//   color: $White;
+//   background-color: $DarkGrey;
+// }
 </style>

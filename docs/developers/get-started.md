@@ -12,12 +12,12 @@ Here's the filesystem organisation of the project:
 - `scripts/`: collection of scripts used to accomplish various tasks during development.
 - `src/`: sources of the application.
     - `assets/`: static resources used in the application (images, ...).
+        - `theme/`: style resources (SCSS, CSS, ...).
     - `components/`: VueJS [components](/components).
         - `docs/`: files used to generate the [components](/components#vuejs-components) documentation.
     - `enums/`: Typescript enumerations used in the application.
     - `mocks/`: JSON resources used as replacement of backend during development.
     - `pages/`: web pages of the application composed from components.
-    - `theme/`: style resources (SCSS, CSS, ...).
     - `utils/`: utility libraries used in the application.
         - `i18n/`: internationalization library.
 - `...`: configurations files for Typescript, Vue, Docker and else.
